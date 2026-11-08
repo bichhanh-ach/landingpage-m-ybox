@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mây Box — Hộp Quà Chữa Lành & Trao Gửi Cảm Xúc</title>
+    <meta name="description" content="Hộp quà chữa lành Mây Box đong đầy ấm áp với nến thơm handmade, gấu bông mini, hoa khô vĩnh cửu và thiệp viết tay yêu thương. Món quà vỗ về tâm hồn.">
+
+    <!-- Google Fonts: Quicksand (Chính), Playfair Display (Tiêu đề thơ mộng), Caveat (Chữ viết tay thiệp) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Quicksand:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            pink: '#FFD1DC',        /* Hồng phấn Mây Box */
+                            lightpink: '#FFF0F3',   /* Nền hồng phớt dịu ngọt */
+                            deeppink: '#E87A90',    /* Điểm nhấn hồng ấm */
+                            cream: '#FFF9F2',       /* Kem nến dịu êm */
+                            softcream: '#FDF6ED',   /* Nền ấm áp */
+                            brown: '#845447',       /* Nâu ấm tự nhiên */
+                            darkbrown: '#56352D',   /* Chữ & icon tương phản */
+                            cloud: '#FFFFFF',       /* Trắng mây bồng bềnh */
+                            sage: '#E3EDE8',        /* Xanh xám thảo mộc */
+                            honey: '#E99B56'        /* Màu mật ong nến thơm */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        handwriting: ['Caveat', 'cursive']
+                    },
+                    boxShadow: {
+                        'soft-pink': '0 10px 30px -5px rgba(255, 209, 220, 0.45)',
+                        'warm-card': '0 15px 35px -10px rgba(132, 84, 71, 0.12)',
+                        'floating': '0 20px 40px -15px rgba(232, 122, 144, 0.25)'
+                    },
+                    animation: {
+                        'float-slow': 'float 5s ease-in-out infinite',
+                        'float-reverse': 'floatRev 6s ease-in-out infinite',
+                        'pulse-soft': 'pulseSoft 2.5s infinite',
+                        'sparkle': 'sparkle 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        floatRev: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(10px)' },
+                        },
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                            '50%': { opacity: '.92', transform: 'scale(1.03)' },
+                        },
+                        sparkle: {
+                            '0%, 100%': { opacity: '0.3', transform: 'rotate(0deg) scale(0.9)' },
+                            '50%': { opacity: '1', transform: 'rotate(15deg) scale(1.15)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Tùy chỉnh thanh cuộn pastel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFF9F2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFD1DC;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E87A90;
+        }
+        .bg-pattern-dots {
+            background-image: radial-gradient(#F5D5DC 1.2px, transparent 1.2px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-darkbrown font-sans antialiased selection:bg-brand-pink selection:text-brand-darkbrown">
+
+    <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
+    <div class="bg-gradient-to-r from-brand-deeppink via-brand-pink to-brand-deeppink text-white py-2 px-4 text-center text-xs md:text-sm font-medium tracking-wide shadow-sm flex items-center justify-center gap-2">
+        <span class="inline-block animate-bounce">🎁</span>
+        <span>Ưu đãi tháng này: <strong>Giảm 25%</strong> + Tặng kèm thiệp viết tay hoa khô nghệ thuật & Free Ship toàn quốc!</span>
+        <a href="#offer" class="underline ml-1 hover:text-brand-cream transition-colors">Xem ngay</a>
+    </div>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-brand-pink/40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-brand-lightpink flex items-center justify-center text-brand-deeppink text-2xl shadow-inner group-hover:scale-105 transition-transform duration-300">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-bold font-serif tracking-tight text-brand-darkbrown block leading-none">Mây Box</span>
+                    <span class="text-[11px] font-semibold text-brand-deeppink tracking-widest uppercase">Quà tặng cảm xúc</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-brand-brown">
+                <a href="#hero" class="hover:text-brand-deeppink transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-sparkles text-xs text-brand-deeppink"></i> Bắt đầu
+                </a>
+                <a href="#story" class="hover:text-brand-deeppink transition-colors">Câu chuyện</a>
+                <a href="#social-proof" class="hover:text-brand-deeppink transition-colors">Cảm nhận</a>
+                <a href="#features" class="hover:text-brand-deeppink transition-colors">Bên trong hộp quà</a>
+                <a href="#offer" class="hover:text-brand-deeppink transition-colors">Bảng giá</a>
+                <a href="#policy" class="hover:text-brand-deeppink transition-colors">Cam kết</a>
+            </nav>
+
+            <!-- CTA Header Button -->
+            <div class="flex items-center gap-3">
+                <a href="tel:0988123456" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-brand-brown hover:text-brand-deeppink transition-colors py-2 px-3">
+                    <i class="fa-solid fa-phone-volume text-brand-deeppink"></i> 0988.123.456
+                </a>
+                <a href="#offer" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-deeppink to-pink-500 text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full shadow-soft-pink hover:shadow-floating hover:opacity-95 transform active:scale-95 transition-all duration-300">
+                    <i class="fa-solid fa-gift"></i>
+                    <span>Đặt Hộp Quà</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== SECTION 1: HERO SECTION (ATTENTION) ==================== -->
+        <section id="hero" class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden bg-pattern-dots">
+            <!-- Decorative Floating Ambient Blobs -->
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand-pink/35 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/2 -right-24 w-96 h-96 bg-brand-honey/20 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Left Column: Copywriting & CTA -->
+                    <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                        
+                        <!-- Handmade & Healing Badge -->
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-brand-pink/80 shadow-sm text-brand-deeppink text-xs sm:text-sm font-bold tracking-wide">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-deeppink opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-deeppink"></span>
+                            </span>
+                            <span>Handmade 100% bằng cả tấm lòng</span>
+                            <span class="text-brand-brown/40">•</span>
+                            <span class="text-brand-brown font-medium">Trải nghiệm Unboxing chữa lành</span>
+                        </div>
+
+                        <!-- Headline (3 Seconds Hook) -->
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-darkbrown leading-[1.2] sm:leading-[1.15]">
+                            Gửi Một <span class="text-brand-deeppink relative inline-block">
+                                Ôm Ấm Áp
+                                <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 250 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 9C55 2.5 185 2 247 9" stroke="#FFD1DC" stroke-width="6" stroke-linecap="round"/>
+                                </svg>
+                            </span> <br class="hidden sm:inline">
+                            Đến Người Bạn Yêu Thương Nhất
+                        </h1>
+
+                        <!-- Subheadline -->
+                        <p class="text-base sm:text-lg text-brand-brown/85 font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Có những ngày mệt nhoài chỉ cần một góc nhỏ thơm lựng hương nến cọ thiên nhiên, một chú gấu bông mềm mại để ôm vào lòng và bức thư nắn nót từng lời yêu. <strong class="text-brand-darkbrown font-semibold">Mây Box</strong> ở đây để thay bạn sưởi ấm người thương, dẫu gần hay cách xa nghìn dặm.
+                        </p>
+
+                        <!-- Key Benefits Bullet Points -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 pb-2 text-left max-w-xl mx-auto lg:mx-0">
+                            <div class="flex items-center gap-2.5 bg-white/70 backdrop-blur-sm p-3 rounded-2xl border border-brand-pink/50">
+                                <div class="w-8 h-8 rounded-full bg-brand-lightpink flex items-center justify-center text-brand-deeppink text-sm">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-brand-darkbrown">Tinh dầu tự nhiên giảm âu lo</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 bg-white/70 backdrop-blur-sm p-3 rounded-2xl border border-brand-pink/50">
+                                <div class="w-8 h-8 rounded-full bg-brand-lightpink flex items-center justify-center text-brand-deeppink text-sm">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-brand-darkbrown">Gấu bông mini êm mềm</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 bg-white/70 backdrop-blur-sm p-3 rounded-2xl border border-brand-pink/50">
+                                <div class="w-8 h-8 rounded-full bg-brand-lightpink flex items-center justify-center text-brand-deeppink text-sm">
+                                    <i class="fa-solid fa-pen-nib"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-brand-darkbrown">Thiệp viết tay theo yêu cầu</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA Group -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+                            <a href="#offer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-brand-deeppink via-rose-400 to-pink-500 text-white font-bold text-base px-8 py-4 rounded-2xl shadow-floating hover:shadow-soft-pink hover:-translate-y-0.5 transform active:scale-95 transition-all duration-300">
+                                <i class="fa-solid fa-gift text-lg animate-bounce"></i>
+                                <span>Đặt Hộp Quà Ngay — Ưu Đãi 25%</span>
+                            </a>
+                            <a href="#features" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-brand-brown hover:text-brand-deeppink font-bold text-sm px-6 py-4 rounded-2xl border border-brand-pink hover:border-brand-deeppink shadow-sm transition-all duration-300">
+                                <i class="fa-regular fa-circle-play text-brand-deeppink"></i>
+                                <span>Khám phá bên trong</span>
+                            </a>
+                        </div>
+
+                        <!-- Mini Trust Proof -->
+                        <div class="flex items-center justify-center lg:justify-start gap-4 pt-2 text-xs text-brand-brown font-medium">
+                            <div class="flex -space-x-2">
+                                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces" alt="Khách hàng">
+                                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces" alt="Khách hàng">
+                                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=faces" alt="Khách hàng">
+                                <div class="h-8 w-8 rounded-full bg-brand-pink text-brand-darkbrown font-bold text-[10px] flex items-center justify-center ring-2 ring-white">+5k</div>
+                            </div>
+                            <div class="text-left">
+                                <div class="flex text-amber-400 text-xs">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="text-brand-darkbrown font-bold ml-1.5">4.9/5</span>
+                                </div>
+                                <span class="text-brand-brown/75">Hơn 5,200+ người đã mỉm cười khi mở hộp</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Visual Showcase -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            
+                            <!-- Main Decorative Frame -->
+                            <div class="relative z-10 bg-white p-4 sm:p-5 rounded-3xl shadow-warm-card border-2 border-brand-pink/40 group">
+                                <div class="relative overflow-hidden rounded-2xl aspect-square bg-brand-lightpink">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=800&auto=format&fit=crop" 
+                                        alt="Hộp quà chữa lành Mây Box" 
+                                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                                    >
+                                    <div class="absolute inset-0 bg-gradient-to-t from-brand-darkbrown/60 via-transparent to-transparent"></div>
+                                    
+                                    <!-- Badge on Image -->
+                                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                                        <span class="px-2.5 py-1 bg-white/20 backdrop-blur-md rounded-lg text-[11px] font-semibold uppercase tracking-wider mb-1 inline-block">Unboxing Edition</span>
+                                        <p class="font-serif text-lg font-bold">Mây Box — Gói Trọn Yêu Thương</p>
+                                        <p class="text-xs text-white/90">Hương thơm lan tỏa • Nến bấc gỗ tí tách • Hoa khô vĩnh cửu</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Element 1: Nến thơm handmade -->
+                            <div class="absolute -top-6 -right-6 z-20 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-floating border border-brand-pink animate-float-slow hidden sm:flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-fire-flame-curved"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-xs font-bold text-brand-darkbrown">Nến Sáp Đậu Nành</p>
+                                    <p class="text-[11px] text-brand-brown/75">Bấc gỗ tí tách êm tai</p>
+                                </div>
+                            </div>
+
+                            <!-- Floating Element 2: Lời nhắn yêu thương -->
+                            <div class="absolute -bottom-8 -left-6 z-20 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-floating border border-brand-pink animate-float-reverse hidden sm:flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-500 flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-envelope-open-text"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-xs font-bold text-brand-darkbrown">Thiệp Viết Tay Riêng Biệt</p>
+                                    <p class="text-[11px] text-brand-brown/75">Từng con chữ nắn nót gửi trao</p>
+                                </div>
+                            </div>
+
+                            <!-- Decorative Stamp -->
+                            <div class="absolute top-1/2 -left-8 -translate-y-1/2 z-20 w-16 h-16 rounded-full bg-brand-deeppink text-white flex flex-col items-center justify-center text-center shadow-lg border-2 border-white rotate-12 hidden lg:flex">
+                                <span class="text-[9px] font-bold uppercase tracking-tighter">Bảo Đảm</span>
+                                <span class="text-xs font-extrabold">100%</span>
+                                <span class="text-[8px]">Yêu thích</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 2: SOCIAL PROOF (TRUST) ==================== -->
+        <section id="social-proof" class="py-16 sm:py-24 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="inline-block px-3.5 py-1.5 rounded-full bg-brand-lightpink text-brand-deeppink font-bold text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-heart mr-1"></i> Niềm Tin Của Khách Hàng
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-darkbrown">
+                        Hơn 5,000+ Trái Tim Đã Được Sưởi Ấm
+                    </h2>
+                    <p class="text-brand-brown text-sm sm:text-base font-medium">
+                        Không chỉ là một món quà, Mây Box là cầu nối chở che cảm xúc, giúp bạn gửi gắm trọn vẹn sự quan tâm tới người thương yêu dù đang ở xa nhau.
+                    </p>
+                </div>
+
+                <!-- Live Counters Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-16">
+                    <!-- Stat 1 -->
+                    <div class="bg-brand-softcream p-6 rounded-3xl text-center border border-brand-pink/30 hover:border-brand-pink transition-all duration-300 hover:shadow-soft-pink">
+                        <div class="w-12 h-12 mx-auto mb-3 rounded-2xl bg-brand-lightpink text-brand-deeppink flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                        <div class="text-3xl sm:text-4xl font-extrabold text-brand-darkbrown mb-1">5,280+</div>
+                        <p class="text-xs sm:text-sm font-semibold text-brand-brown">Hộp Quà Đã Gửi Đi</p>
+                        <span class="text-[11px] text-brand-brown/60">Trên khắp 63 tỉnh thành</span>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="bg-brand-softcream p-6 rounded-3xl text-center border border-brand-pink/30 hover:border-brand-pink transition-all duration-300 hover:shadow-soft-pink">
+                        <div class="w-12 h-12 mx-auto mb-3 rounded-2xl bg-amber-100 text-amber-500 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text-3xl sm:text-4xl font-extrabold text-brand-darkbrown mb-1">4.9 / 5</div>
+                        <p class="text-xs sm:text-sm font-semibold text-brand-brown">Điểm Đánh Giá 5 Sao</p>
+                        <span class="text-[11px] text-brand-brown/60">Từ 1,850+ nhận xét thật</span>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="bg-brand-softcream p-6 rounded-3xl text-center border border-brand-pink/30 hover:border-brand-pink transition-all duration-300 hover:shadow-soft-pink">
+                        <div class="w-12 h-12 mx-auto mb-3 rounded-2xl bg-rose-100 text-rose-500 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-face-smile-beam"></i>
+                        </div>
+                        <div class="text-3xl sm:text-4xl font-extrabold text-brand-darkbrown mb-1">98.6%</div>
+                        <p class="text-xs sm:text-sm font-semibold text-brand-brown">Cảm Thấy Được Chữa Lành</p>
+                        <span class="text-[11px] text-brand-brown/60">Khảo sát người nhận hộp</span>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="bg-brand-softcream p-6 rounded-3xl text-center border border-brand-pink/30 hover:border-brand-pink transition-all duration-300 hover:shadow-soft-pink">
+                        <div class="w-12 h-12 mx-auto mb-3 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <div class="text-3xl sm:text-4xl font-extrabold text-brand-darkbrown mb-1">100%</div>
+                        <p class="text-xs sm:text-sm font-semibold text-brand-brown">Đổi Mới Nếu Bị Vỡ Hỏng</p>
+                        <span class="text-[11px] text-brand-brown/60">Bảo hành an tâm tuyệt đối</span>
+                    </div>
+                </div>
+
+                <!-- Testimonials Grid (3 Real Stories) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-brand-cream/60 p-7 rounded-3xl border border-brand-pink/40 shadow-sm hover:shadow-warm-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <!-- Stars -->
+                            <div class="flex items-center gap-1 text-amber-400 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="ml-2 text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Đã mua hàng</span>
+                            </div>
+                            <!-- Quote -->
+                            <p class="text-brand-darkbrown text-sm sm:text-base leading-relaxed italic">
+                                "Mình đặt tặng cô bạn thân đúng mùa ôn thi tốt nghiệp căng thẳng. Bạn mở hộp quà ra mà gọi cho mình khóc nấc vì xúc động. Nến thơm mùi quế cam dịu cực kỳ, chú gấu bông nhỏ xíu mềm mịn ôm rất thích. Cảm ơn Mây Box đã viết thiệp chữ đẹp như in!"
+                            </p>
+                        </div>
+                        
+                        <!-- User Info -->
+                        <div class="flex items-center gap-3 pt-6 mt-6 border-t border-brand-pink/30">
+                            <img class="w-11 h-11 rounded-full object-cover ring-2 ring-brand-deeppink/30" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces" alt="Mai Phương">
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-darkbrown">Mai Phương (24 tuổi)</h4>
+                                <p class="text-xs text-brand-brown/70">Designer tại TP. Hồ Chí Minh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-brand-lightpink/40 p-7 rounded-3xl border-2 border-brand-deeppink/30 shadow-soft-pink hover:shadow-floating hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-brand-deeppink text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                            Câu chuyện yêu xa
+                        </div>
+                        <div class="space-y-4">
+                            <!-- Stars -->
+                            <div class="flex items-center gap-1 text-amber-400 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="ml-2 text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Đã mua hàng</span>
+                            </div>
+                            <!-- Quote -->
+                            <p class="text-brand-darkbrown text-sm sm:text-base leading-relaxed italic">
+                                "Mình và bạn gái yêu xa hơn 800km. Sinh nhật cô ấy mình không về kịp nên nhờ Mây Box chuyển phát hỏa tốc. Lúc người yêu mình unboxing quay video lại, ánh mắt rạng rỡ làm mình ấm lòng theo. Món quà làm chỉn chu từ ruy băng đến mùi hương!"
+                            </p>
+                        </div>
+                        
+                        <!-- User Info -->
+                        <div class="flex items-center gap-3 pt-6 mt-6 border-t border-brand-pink/40">
+                            <img class="w-11 h-11 rounded-full object-cover ring-2 ring-brand-deeppink/30" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces" alt="Hoàng Nam">
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-darkbrown">Hoàng Nam (27 tuổi)</h4>
+                                <p class="text-xs text-brand-brown/70">Kỹ sư phần mềm — Hà Nội</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-brand-cream/60 p-7 rounded-3xl border border-brand-pink/40 shadow-sm hover:shadow-warm-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <!-- Stars -->
+                            <div class="flex items-center gap-1 text-amber-400 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="ml-2 text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Đã mua hàng</span>
+                            </div>
+                            <!-- Quote -->
+                            <p class="text-brand-darkbrown text-sm sm:text-base leading-relaxed italic">
+                                "Tự thưởng cho bản thân một hộp quà sau cả tháng trời cày cuốc deadline. Buổi tối bật nến bấc gỗ nghe tiếng lách tách, ôm em gấu ngắm đóa hoa cúc khô thấy bình yên đến lạ. Thật sự là món quà chữa lành đúng nghĩa cho tâm hồn!"
+                            </p>
+                        </div>
+                        
+                        <!-- User Info -->
+                        <div class="flex items-center gap-3 pt-6 mt-6 border-t border-brand-pink/30">
+                            <img class="w-11 h-11 rounded-full object-cover ring-2 ring-brand-deeppink/30" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces" alt="Thùy Dung">
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-darkbrown">Thùy Dung (22 tuổi)</h4>
+                                <p class="text-xs text-brand-brown/70">Content Creator — Đà Nẵng</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 3: FEATURES & BENEFITS (INTEREST & DESIRE) ==================== -->
+        <section id="features" class="py-16 sm:py-24 bg-brand-softcream relative overflow-hidden">
+            <!-- Background Soft Waves -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="inline-block px-3.5 py-1.5 rounded-full bg-brand-lightpink text-brand-deeppink font-bold text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-sparkles mr-1"></i> Chi Tiết Hộp Quà Mây Box
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-darkbrown leading-tight">
+                        Có Gì Bên Trong Hộp Quà Chữa Lành?
+                    </h2>
+                    <p class="text-brand-brown text-base max-w-2xl mx-auto">
+                        Mỗi chi tiết nhỏ đều được tuyển chọn kỹ lưỡng, gói ghém bằng đôi tay nâng niu và sự tận tâm tuyệt đối để người nhận cảm nhận được giá trị tinh thần trọn vẹn.
+                    </p>
+                </div>
+
+                <!-- 4 Components Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+                    
+                    <!-- Item 1: Nến Thơm Tinh Dầu Thiên Nhiên -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm hover:shadow-warm-card hover:-translate-y-1.5 transition-all duration-300 border border-brand-pink/40 flex flex-col group">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 bg-amber-50">
+                            <img 
+                                src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=600&auto=format&fit=crop&q=80" 
+                                alt="Nến thơm thiên nhiên" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            >
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-brand-deeppink text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                                <i class="fa-solid fa-leaf text-emerald-500 mr-1"></i> 100% Thuần Chay
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-darkbrown mb-2 flex items-center gap-2">
+                            <span>Nến Thơm Tinh Dầu</span>
+                            <span class="text-amber-500 text-sm"><i class="fa-solid fa-fire"></i></span>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-brand-brown/85 leading-relaxed mb-4 flex-grow">
+                            Đúc từ sáp đậu nành & bơ cọ nguyên chất, không khói đen độc hại. Bấc gỗ tạo âm thanh tách tách êm dịu, hương thơm Lavender & Gỗ thông giúp xoa dịu thần kinh tức thì.
+                        </p>
+                        <div class="pt-3 border-t border-brand-pink/30 flex items-center justify-between text-xs font-semibold text-brand-deeppink">
+                            <span>Thời gian cháy: 35-40 giờ</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Gấu Bông Mini Mềm Mịn -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm hover:shadow-warm-card hover:-translate-y-1.5 transition-all duration-300 border border-brand-pink/40 flex flex-col group">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 bg-rose-50">
+                            <img 
+                                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&auto=format&fit=crop&q=80" 
+                                alt="Gấu bông mini mềm mịn" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            >
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-brand-deeppink text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                                <i class="fa-solid fa-heart text-rose-500 mr-1"></i> Lông Cừu Cao Cấp
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-darkbrown mb-2 flex items-center gap-2">
+                            <span>Gấu Bông Mini Mây</span>
+                            <span class="text-rose-400 text-sm"><i class="fa-solid fa-paw"></i></span>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-brand-brown/85 leading-relaxed mb-4 flex-grow">
+                            Chất liệu lông cừu nhung siêu mềm mượt, sờ vào là thích ngay. Kích thước 12cm vừa vặn để trên bàn làm việc hoặc mang theo như người bạn tri kỷ xua tan cô đơn.
+                        </p>
+                        <div class="pt-3 border-t border-brand-pink/30 flex items-center justify-between text-xs font-semibold text-brand-deeppink">
+                            <span>Kèm nơ lụa thắt tay</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Hoa Khô Nghệ Thuật -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm hover:shadow-warm-card hover:-translate-y-1.5 transition-all duration-300 border border-brand-pink/40 flex flex-col group">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 bg-emerald-50">
+                            <img 
+                                src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&auto=format&fit=crop&q=80" 
+                                alt="Hoa khô vĩnh cửu" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            >
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-brand-deeppink text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                                <i class="fa-solid fa-spa text-emerald-500 mr-1"></i> Bền Đẹp 3 Năm
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-darkbrown mb-2 flex items-center gap-2">
+                            <span>Hoa Khô Nghệ Thuật</span>
+                            <span class="text-emerald-500 text-sm"><i class="fa-solid fa-seedling"></i></span>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-brand-brown/85 leading-relaxed mb-4 flex-grow">
+                            Bó hoa mini từ hoa baby sấy lạnh công nghệ Nhật kết hợp hoa cúc bất tử và lá bạch đàn thơm. Giữ nguyên sắc thái mộc mạc tượng trưng cho tình cảm bền lâu theo năm tháng.
+                        </p>
+                        <div class="pt-3 border-t border-brand-pink/30 flex items-center justify-between text-xs font-semibold text-brand-deeppink">
+                            <span>Sấy lạnh tự nhiên</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Thiệp Viết Tay Tình Cảm -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm hover:shadow-warm-card hover:-translate-y-1.5 transition-all duration-300 border border-brand-pink/40 flex flex-col group">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/3] mb-5 bg-orange-50">
+                            <img 
+                                src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=600&auto=format&fit=crop&q=80" 
+                                alt="Thiệp viết tay thủ công" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            >
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-brand-deeppink text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                                <i class="fa-solid fa-feather text-amber-600 mr-1"></i> Dấu Sáp Cổ Điển
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-darkbrown mb-2 flex items-center gap-2">
+                            <span>Thiệp Viết Tay Riêng</span>
+                            <span class="text-amber-700 text-sm"><i class="fa-solid fa-pen-fancy"></i></span>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-brand-brown/85 leading-relaxed mb-4 flex-grow">
+                            Giấy mỹ thuật dập nổi viền thô vintage kèm dấu niêm phong sáp hoa văn Mây Box. Bạn chỉ cần gửi gắm tâm tình trong form đặt hàng, chúng mình sẽ nắn nót viết từng nét chữ.
+                        </p>
+                        <div class="pt-3 border-t border-brand-pink/30 flex items-center justify-between text-xs font-semibold text-brand-deeppink">
+                            <span>Miễn phí viết tay 100%</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3 Core Healing Benefits Highlight Banner -->
+                <div class="bg-gradient-to-br from-brand-deeppink via-rose-400 to-pink-500 rounded-3xl p-8 sm:p-12 text-white shadow-floating relative overflow-hidden">
+                    <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <div class="max-w-3xl mb-10 text-center sm:text-left">
+                        <span class="text-xs uppercase tracking-widest bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full font-bold">Giá Trị Chữa Lành (Healing Values)</span>
+                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold mt-3">
+                            Món Quà Vỗ Về Cảm Xúc Hoàn Hảo Nhất
+                        </h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Benefit 1 -->
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/15 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-white text-brand-deeppink flex items-center justify-center text-xl mb-4 shadow-sm">
+                                <i class="fa-solid fa-cloud-moon"></i>
+                            </div>
+                            <h4 class="text-lg font-bold mb-2 font-serif">Giảm Căng Thẳng & Dễ Ngủ</h4>
+                            <p class="text-sm text-white/90 leading-relaxed font-light">
+                                Liệu pháp hương thơm tự nhiên (Aromatherapy) giúp giải phóng endorphin, làm dịu hệ thần kinh căng thẳng sau những giờ làm việc áp lực.
+                            </p>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/15 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-white text-brand-deeppink flex items-center justify-center text-xl mb-4 shadow-sm">
+                                <i class="fa-solid fa-mug-hot"></i>
+                            </div>
+                            <h4 class="text-lg font-bold mb-2 font-serif">Sưởi Ấm Tâm Hồn</h4>
+                            <p class="text-sm text-white/90 leading-relaxed font-light">
+                                Cảm giác được ai đó nhớ tới và trân trọng qua một món quà thủ công tỉ mỉ sẽ là liều thuốc ngọt ngào nhất đánh tan mọi âu lo, cô đơn.
+                            </p>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/15 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-white text-brand-deeppink flex items-center justify-center text-xl mb-4 shadow-sm">
+                                <i class="fa-solid fa-ribbon"></i>
+                            </div>
+                            <h4 class="text-lg font-bold mb-2 font-serif">Thắt Chặt Tình Cảm</h4>
+                            <p class="text-sm text-white/90 leading-relaxed font-light">
+                                Trải nghiệm mở hộp unboxing bất ngờ kết hợp lời chúc chân thành giúp kết nối hai tâm hồn, lưu lại kỷ niệm đáng nhớ dài lâu.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 4: OFFER & PRICING + ORDER FORM (ACTION) ==================== -->
+        <section id="offer" class="py-16 sm:py-24 bg-brand-cream relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header with Flash Sale Countdown -->
+                <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100 text-rose-700 font-bold text-xs uppercase tracking-wider animate-pulse">
+                        <i class="fa-solid fa-stopwatch"></i> Ưu Đãi Giới Hạn — Flash Sale Kết Thúc Sau
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-darkbrown">
+                        Chọn Hộp Quà Phù Hợp Cho Người Thương
+                    </h2>
+                    <p class="text-brand-brown text-sm sm:text-base">
+                        Chỉ áp dụng mức giá ưu đãi trong hôm nay. Số lượng quà tặng kèm túi giấy vintage có hạn (còn 12 suất).
+                    </p>
+
+                    <!-- Real-time Countdown Timer Box -->
+                    <div class="flex items-center justify-center gap-3 sm:gap-4 pt-2">
+                        <div class="bg-white px-3 sm:px-4 py-2 sm:py-3 rounded-2xl shadow-sm border border-brand-pink text-center min-w-[64px] sm:min-w-[75px]">
+                            <span id="timer-hours" class="block text-xl sm:text-3xl font-extrabold text-brand-deeppink">08</span>
+                            <span class="text-[10px] sm:text-xs text-brand-brown font-semibold uppercase">Giờ</span>
+                        </div>
+                        <span class="text-xl sm:text-2xl font-bold text-brand-deeppink">:</span>
+                        <div class="bg-white px-3 sm:px-4 py-2 sm:py-3 rounded-2xl shadow-sm border border-brand-pink text-center min-w-[64px] sm:min-w-[75px]">
+                            <span id="timer-minutes" class="block text-xl sm:text-3xl font-extrabold text-brand-deeppink">42</span>
+                            <span class="text-[10px] sm:text-xs text-brand-brown font-semibold uppercase">Phút</span>
+                        </div>
+                        <span class="text-xl sm:text-2xl font-bold text-brand-deeppink">:</span>
+                        <div class="bg-white px-3 sm:px-4 py-2 sm:py-3 rounded-2xl shadow-sm border border-brand-pink text-center min-w-[64px] sm:min-w-[75px]">
+                            <span id="timer-seconds" class="block text-xl sm:text-3xl font-extrabold text-brand-deeppink">18</span>
+                            <span class="text-[10px] sm:text-xs text-brand-brown font-semibold uppercase">Giây</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing Cards Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-20">
+                    
+                    <!-- Package 1: Gió Nhẹ (Basic) -->
+                    <div class="bg-white rounded-3xl p-8 border border-brand-pink/50 shadow-sm hover:shadow-warm-card transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-brand-darkbrown">Hộp Gió Nhẹ</h3>
+                                    <p class="text-xs text-brand-brown/70">Món quà tinh gọn, nhẹ nhàng</p>
+                                </div>
+                                <span class="bg-brand-lightpink text-brand-deeppink text-xs font-bold px-3 py-1 rounded-full">Tiết kiệm 25%</span>
+                            </div>
+
+                            <div class="mb-6">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-3xl font-extrabold text-brand-darkbrown">299.000đ</span>
+                                    <span class="text-sm text-brand-brown/50 line-through">399.000đ</span>
+                                </div>
+                                <span class="text-xs text-emerald-600 font-semibold">Tặng kèm diêm đốt nến cao cấp</span>
+                            </div>
+
+                            <ul class="space-y-3.5 text-xs sm:text-sm text-brand-darkbrown/90 mb-8">
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>01 Nến thơm sáp cọ 120g (Hương hoa nhài)</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>01 Bó hoa khô mini trang trí</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>01 Thiệp viết tay theo yêu cầu</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>Hộp quà nắp gập thắt nơ ruy băng</span>
+                                </li>
+                                <li class="flex items-center gap-2.5 text-brand-brown/40 line-through">
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                    <span>Gấu bông mini lông cừu mềm mại</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button onclick="selectPackage('Hộp Gió Nhẹ (299.000đ)')" class="w-full py-3.5 px-6 rounded-2xl bg-brand-lightpink text-brand-deeppink hover:bg-brand-deeppink hover:text-white font-bold text-sm transition-all duration-300">
+                            Chọn Hộp Gió Nhẹ
+                        </button>
+                    </div>
+
+                    <!-- Package 2: Mây Ấm (BEST SELLER) -->
+                    <div class="bg-gradient-to-b from-white to-pink-50/50 rounded-3xl p-8 border-2 border-brand-deeppink shadow-floating transition-all duration-300 flex flex-col justify-between relative transform lg:-translate-y-4">
+                        <!-- Best seller badge -->
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-deeppink to-pink-500 text-white font-bold text-xs uppercase tracking-wider py-1.5 px-4 rounded-full shadow-md flex items-center gap-1.5">
+                            <i class="fa-solid fa-crown text-amber-300"></i> Được Yêu Thích Nhất
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-start mb-4 mt-2">
+                                <div>
+                                    <h3 class="text-2xl font-serif font-bold text-brand-darkbrown">Hộp Mây Ấm</h3>
+                                    <p class="text-xs text-brand-deeppink font-semibold">Trọn vẹn 4 thành phần chữa lành</p>
+                                </div>
+                                <span class="bg-rose-100 text-rose-700 text-xs font-bold px-3 py-1 rounded-full">Tiết kiệm 30%</span>
+                            </div>
+
+                            <div class="mb-6">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-4xl font-extrabold text-brand-deeppink">459.000đ</span>
+                                    <span class="text-base text-brand-brown/50 line-through">650.000đ</span>
+                                </div>
+                                <span class="text-xs text-emerald-600 font-bold">🎉 Miễn phí giao hàng toàn quốc</span>
+                            </div>
+
+                            <ul class="space-y-3.5 text-xs sm:text-sm text-brand-darkbrown/90 mb-8">
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span class="font-bold">01 Nến thơm cao cấp 200g (Bấc gỗ tí tách)</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span class="font-bold">01 Gấu bông mini lông cừu thắt nơ xinh</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>01 Bó hoa cúc bất tử & hoa baby Nhật</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>01 Thiệp giấy nghệ thuật dập nổi & dấu sáp</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>Tặng kèm bao diêm gỗ vintage & túi quai xách</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button onclick="selectPackage('Hộp Mây Ấm - Best Seller (459.000đ)')" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-brand-deeppink to-pink-500 text-white hover:opacity-95 font-bold text-sm shadow-soft-pink hover:shadow-floating transition-all duration-300">
+                            Đặt Hộp Mây Ấm Ngay
+                        </button>
+                    </div>
+
+                    <!-- Package 3: Trăng Rằm (Premium Luxury) -->
+                    <div class="bg-white rounded-3xl p-8 border border-brand-pink/50 shadow-sm hover:shadow-warm-card transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-brand-darkbrown">Hộp Trăng Rằm</h3>
+                                    <p class="text-xs text-brand-brown/70">Bộ sưu tập thượng hạng cao cấp</p>
+                                </div>
+                                <span class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full">VIP Edition</span>
+                            </div>
+
+                            <div class="mb-6">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-3xl font-extrabold text-brand-darkbrown">699.000đ</span>
+                                    <span class="text-sm text-brand-brown/50 line-through">890.000đ</span>
+                                </div>
+                                <span class="text-xs text-emerald-600 font-semibold">Tặng xịt thơm gối ngủ thảo mộc</span>
+                            </div>
+
+                            <ul class="space-y-3.5 text-xs sm:text-sm text-brand-darkbrown/90 mb-8">
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span class="font-semibold">02 Nến thơm tinh dầu (Hương Ngày & Đêm)</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>01 Gấu bông mini xù phiên bản giới hạn</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>01 Lọ hoa khô nghệ thuật cắm sẵn</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>01 Chai xịt thơm gối ngủ Lavender 50ml</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-brand-deeppink"></i>
+                                    <span>Hộp cứng vân gỗ phủ nhung sang trọng</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button onclick="selectPackage('Hộp Trăng Rằm - Premium (699.000đ)')" class="w-full py-3.5 px-6 rounded-2xl bg-brand-lightpink text-brand-deeppink hover:bg-brand-deeppink hover:text-white font-bold text-sm transition-all duration-300">
+                            Chọn Hộp Trăng Rằm
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Fast Order Form Box -->
+                <div class="max-w-3xl mx-auto bg-white rounded-3xl p-6 sm:p-10 shadow-warm-card border-2 border-brand-pink/60 relative">
+                    <div class="text-center mb-8">
+                        <div class="w-12 h-12 rounded-full bg-brand-lightpink text-brand-deeppink flex items-center justify-center text-xl mx-auto mb-3">
+                            <i class="fa-solid fa-feather-pointed"></i>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brand-darkbrown">Form Đăng Ký Mua Hàng Nhanh</h3>
+                        <p class="text-brand-brown text-xs sm:text-sm mt-1">Chuyên viên tư vấn sẽ liên hệ lại qua Zalo/Điện thoại trong vòng 10 phút</p>
+                    </div>
+
+                    <form id="orderForm" onsubmit="handleOrderSubmit(event)" class="space-y-5">
+                        
+                        <!-- Selected Package Display & Selector -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-darkbrown mb-1.5 uppercase tracking-wide">
+                                Gói Hộp Quà Bạn Đã Chọn:
+                            </label>
+                            <select id="selectedPackage" class="w-full px-4 py-3 rounded-2xl bg-brand-softcream border border-brand-pink focus:outline-none focus:ring-2 focus:ring-brand-deeppink text-sm font-semibold text-brand-darkbrown">
+                                <option value="Hộp Mây Ấm - Best Seller (459.000đ)">Hộp Mây Ấm - Best Seller (459.000đ) - Khuyên dùng</option>
+                                <option value="Hộp Gió Nhẹ (299.000đ)">Hộp Gió Nhẹ (299.000đ)</option>
+                                <option value="Hộp Trăng Rằm - Premium (699.000đ)">Hộp Trăng Rằm - Premium (699.000đ)</option>
+                            </select>
+                        </div>
+
+                        <!-- Customer Info (2 columns) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-brand-darkbrown mb-1.5">Họ và tên bạn <span class="text-rose-500">*</span></label>
+                                <div class="relative">
+                                    <i class="fa-regular fa-user absolute left-4 top-1/2 -translate-y-1/2 text-brand-brown/50 text-sm"></i>
+                                    <input type="text" id="custName" required placeholder="Ví dụ: Nguyễn Thùy Linh" class="w-full pl-11 pr-4 py-3 rounded-2xl bg-brand-softcream border border-brand-pink focus:outline-none focus:ring-2 focus:ring-brand-deeppink text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-brand-darkbrown mb-1.5">Số điện thoại nhận hàng <span class="text-rose-500">*</span></label>
+                                <div class="relative">
+                                    <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-brand-brown/50 text-sm"></i>
+                                    <input type="tel" id="custPhone" required placeholder="Ví dụ: 0912 345 678" pattern="[0-9]{10,11}" class="w-full pl-11 pr-4 py-3 rounded-2xl bg-brand-softcream border border-brand-pink focus:outline-none focus:ring-2 focus:ring-brand-deeppink text-sm">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-darkbrown mb-1.5">Địa chỉ nhận hàng (Số nhà, đường, phường/xã, tỉnh/thành) <span class="text-rose-500">*</span></label>
+                            <div class="relative">
+                                <i class="fa-solid fa-location-dot absolute left-4 top-4 text-brand-brown/50 text-sm"></i>
+                                <input type="text" id="custAddress" required placeholder="Ví dụ: 123 Nguyễn Thị Minh Khai, P. Bến Nghé, Quận 1, TP.HCM" class="w-full pl-11 pr-4 py-3 rounded-2xl bg-brand-softcream border border-brand-pink focus:outline-none focus:ring-2 focus:ring-brand-deeppink text-sm">
+                            </div>
+                        </div>
+
+                        <!-- Handwritten Note/Wish -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-darkbrown mb-1.5 flex justify-between items-center">
+                                <span>Lời chúc nắn nót viết lên thiệp (Tùy chọn)</span>
+                                <span class="text-[11px] text-brand-deeppink font-semibold">Miễn phí dịch vụ thiệp viết tay</span>
+                            </label>
+                            <div class="relative">
+                                <textarea id="custNote" rows="3" placeholder="Ghi lại những lời chúc ngọt ngào bạn muốn Mây Box viết tay gửi đến người nhận nhé..." class="w-full p-4 rounded-2xl bg-brand-softcream border border-brand-pink focus:outline-none focus:ring-2 focus:ring-brand-deeppink text-sm"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-darkbrown mb-2">Phương thức thanh toán:</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center gap-3 p-3 rounded-2xl border border-brand-pink bg-brand-softcream cursor-pointer hover:bg-brand-lightpink/50 transition-colors">
+                                    <input type="radio" name="paymentMethod" value="COD" checked class="text-brand-deeppink focus:ring-brand-deeppink">
+                                    <span class="text-xs font-bold text-brand-darkbrown">Thanh toán khi nhận hàng (COD)</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 rounded-2xl border border-brand-pink bg-brand-softcream cursor-pointer hover:bg-brand-lightpink/50 transition-colors">
+                                    <input type="radio" name="paymentMethod" value="BANK" class="text-brand-deeppink focus:ring-brand-deeppink">
+                                    <span class="text-xs font-bold text-brand-darkbrown">Chuyển khoản (Nhận ảnh hộp quà trước)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="pt-4">
+                            <button type="submit" class="w-full py-4 px-8 rounded-2xl bg-gradient-to-r from-brand-deeppink via-rose-400 to-pink-500 text-white font-bold text-base shadow-floating hover:shadow-soft-pink hover:opacity-95 transform active:scale-95 transition-all duration-300 flex items-center justify-center gap-3">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Xác Nhận Đặt Hàng — Gửi Yêu Thương Ngay</span>
+                            </button>
+                            <p class="text-[11px] text-center text-brand-brown/70 mt-3 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-lock text-emerald-600"></i> Thông tin của bạn được bảo mật tuyệt đối 100%
+                            </p>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 5: FOOTER & TRUST GUARANTEES (REASSURANCE) ==================== -->
+        <section id="policy" class="py-16 bg-white border-t border-brand-pink/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- 4 Reassurance Commitments -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    
+                    <div class="flex items-start gap-4 p-5 rounded-3xl bg-brand-cream/60 border border-brand-pink/30">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-500 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-darkbrown mb-1">Bảo Hành 1 Đổi 1</h4>
+                            <p class="text-xs text-brand-brown/80 leading-relaxed">Đổi mới tức thì miễn phí trong 48h nếu nến bị vỡ hoặc lỗi trong lúc vận chuyển.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 rounded-3xl bg-brand-cream/60 border border-brand-pink/30">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-darkbrown mb-1">Giao Hàng Hỏa Tốc</h4>
+                            <p class="text-xs text-brand-brown/80 leading-relaxed">Giao 2 giờ tại nội thành Hà Nội & TP.HCM. Ship an toàn 2-3 ngày toàn quốc.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 rounded-3xl bg-brand-cream/60 border border-brand-pink/30">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-camera-retro"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-darkbrown mb-1">Chụp Ảnh Trước Giao</h4>
+                            <p class="text-xs text-brand-brown/80 leading-relaxed">Gửi ảnh chụp hộp quà và nét chữ viết tay hoàn thiện để bạn duyệt trước khi gửi đi.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 rounded-3xl bg-brand-cream/60 border border-brand-pink/30">
+                        <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-darkbrown mb-1">Bảo Mật Bất Ngờ</h4>
+                            <p class="text-xs text-brand-brown/80 leading-relaxed">Không ghi giá tiền vào hộp quà, giữ kín danh tính người gửi nếu bạn muốn tạo bất ngờ.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer Main Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pt-10 border-t border-brand-pink/40">
+                    
+                    <!-- Col 1: Brand Story & Mission -->
+                    <div class="md:col-span-5 space-y-4">
+                        <a href="#" class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-lightpink flex items-center justify-center text-brand-deeppink text-xl shadow-inner">
+                                <i class="fa-solid fa-cloud"></i>
+                            </div>
+                            <div>
+                                <span class="text-2xl font-bold font-serif text-brand-darkbrown leading-none block">Mây Box</span>
+                                <span class="text-[10px] font-bold text-brand-deeppink tracking-widest uppercase">Quà tặng cảm xúc</span>
+                            </div>
+                        </a>
+                        <p class="text-xs sm:text-sm text-brand-brown/85 leading-relaxed max-w-sm">
+                            Mây Box ra đời với mong muốn mang lại những cái ôm bằng xúc giác và khứu giác. Nơi cảm xúc chân thành được gửi gắm qua từng ánh nến ấm áp, cánh hoa dịu dàng và nét chữ viết tay mộc mạc.
+                        </p>
+                        <!-- Social Media Links -->
+                        <div class="flex items-center gap-3 pt-2">
+                            <a href="#" class="w-9 h-9 rounded-full bg-brand-softcream text-brand-darkbrown hover:bg-brand-deeppink hover:text-white flex items-center justify-center transition-colors shadow-sm">
+                                <i class="fa-brands fa-facebook-f text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-full bg-brand-softcream text-brand-darkbrown hover:bg-brand-deeppink hover:text-white flex items-center justify-center transition-colors shadow-sm">
+                                <i class="fa-brands fa-instagram text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-full bg-brand-softcream text-brand-darkbrown hover:bg-brand-deeppink hover:text-white flex items-center justify-center transition-colors shadow-sm">
+                                <i class="fa-brands fa-tiktok text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-full bg-brand-softcream text-brand-darkbrown hover:bg-brand-deeppink hover:text-white flex items-center justify-center transition-colors shadow-sm">
+                                <i class="fa-solid fa-shop text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Col 2: Fast Navigation Links -->
+                    <div class="md:col-span-3 space-y-3">
+                        <h5 class="text-sm font-bold text-brand-darkbrown uppercase tracking-wider">Hỗ Trợ & Mua Hàng</h5>
+                        <ul class="space-y-2 text-xs sm:text-sm text-brand-brown">
+                            <li><a href="#hero" class="hover:text-brand-deeppink transition-colors">Về Mây Box</a></li>
+                            <li><a href="#features" class="hover:text-brand-deeppink transition-colors">Bên trong hộp quà</a></li>
+                            <li><a href="#offer" class="hover:text-brand-deeppink transition-colors">Bảng giá ưu đãi</a></li>
+                            <li><a href="#policy" class="hover:text-brand-deeppink transition-colors">Chính sách 1 đổi 1</a></li>
+                            <li><a href="#policy" class="hover:text-brand-deeppink transition-colors">Bảo mật thông tin</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Direct Contact Information -->
+                    <div class="md:col-span-4 space-y-3">
+                        <h5 class="text-sm font-bold text-brand-darkbrown uppercase tracking-wider">Xưởng Quà & Tư Vấn</h5>
+                        <ul class="space-y-2.5 text-xs sm:text-sm text-brand-brown">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-location-dot text-brand-deeppink mt-1"></i>
+                                <span>Xưởng Mây: 28 ngõ Yên Thế, Đống Đa, Hà Nội & 184/5 Nguyễn Đình Chính, Phú Nhuận, TP.HCM</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-phone text-brand-deeppink"></i>
+                                <span>Hotline / Zalo: <strong>0988.123.456</strong> (8h00 - 22h00)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-regular fa-envelope text-brand-deeppink"></i>
+                                <span>Email: <strong>chualanh@maybox.vn</strong></span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-regular fa-clock text-brand-deeppink"></i>
+                                <span>Nhận gói quà và viết thiệp hỏa tốc cả thứ 7 & Chủ Nhật</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Copyright Bar -->
+                <div class="pt-10 mt-10 border-t border-brand-pink/30 text-center text-xs text-brand-brown/70 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p>© 2026 Mây Box — Quà Tặng Cảm Xúc. Tất cả các quyền được bảo lưu.</p>
+                    <p class="flex items-center gap-1">
+                        Made with <i class="fa-solid fa-heart text-rose-500"></i> by Mây Box Team
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FLOATING QUICK ACTIONS ==================== -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <!-- Zalo Chat Button -->
+        <a href="https://zalo.me/0988123456" target="_blank" rel="noopener noreferrer" class="w-13 h-13 p-3.5 bg-blue-500 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center relative group" title="Chat Zalo ngay">
+            <span class="font-extrabold text-sm">Zalo</span>
+            <span class="absolute right-full mr-3 bg-brand-darkbrown text-white text-xs px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+                Tư vấn nhanh qua Zalo
+            </span>
+        </a>
+
+        <!-- Hotline Call Button -->
+        <a href="tel:0988123456" class="w-13 h-13 p-3.5 bg-gradient-to-r from-brand-deeppink to-pink-500 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group" title="Gọi Hotline">
+            <i class="fa-solid fa-phone text-lg animate-bounce"></i>
+            <span class="absolute right-full mr-3 bg-brand-darkbrown text-white text-xs px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+                Hotline 0988.123.456
+            </span>
+        </a>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hidden w-11 h-11 bg-white text-brand-darkbrown rounded-full shadow-md border border-brand-pink hover:bg-brand-lightpink transition-all items-center justify-center">
+            <i class="fa-solid fa-chevron-up text-sm"></i>
+        </button>
+    </div>
+
+    <!-- ==================== ORDER SUCCESS MODAL ==================== -->
+    <div id="successModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center shadow-2xl border-2 border-brand-pink transform transition-all scale-95 duration-300 space-y-5">
+            <div class="w-16 h-16 rounded-full bg-brand-lightpink text-brand-deeppink flex items-center justify-center text-3xl mx-auto shadow-inner animate-bounce">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            
+            <div class="space-y-2">
+                <h3 class="text-2xl font-serif font-bold text-brand-darkbrown">Đặt Hàng Thành Công!</h3>
+                <p class="text-sm text-brand-brown">
+                    Cảm ơn bạn <strong id="modalCustName" class="text-brand-deeppink"></strong> đã gửi gắm yêu thương tại Mây Box.
+                </p>
+                <div class="bg-brand-softcream p-4 rounded-2xl text-xs text-brand-darkbrown text-left space-y-1.5 border border-brand-pink/50">
+                    <p>📦 <strong>Gói quà:</strong> <span id="modalPackage"></span></p>
+                    <p>📞 <strong>SĐT nhận:</strong> <span id="modalCustPhone"></span></p>
+                    <p>💌 <strong>Ghi chú:</strong> <span id="modalCustNote" class="italic text-brand-brown">Không có</span></p>
+                </div>
+                <p class="text-xs text-brand-brown/80 pt-2">
+                    Team Mây Box sẽ gọi điện/nhắn Zalo xác nhận đơn và gửi ảnh hoàn thiện hộp quà cho bạn ngay nhé!
+                </p>
+            </div>
+
+            <button onclick="closeSuccessModal()" class="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-brand-deeppink to-pink-500 text-white font-bold text-sm shadow-soft-pink hover:opacity-95 transition-all">
+                Tuyệt Vời, Cảm Ơn Mây Box!
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // 1. COUNTDOWN TIMER JAVASCRIPT
+        let totalSeconds = (8 * 3600) + (42 * 60) + 18; // 8 giờ 42 phút 18 giây
+        const timerHours = document.getElementById('timer-hours');
+        const timerMinutes = document.getElementById('timer-minutes');
+        const timerSeconds = document.getElementById('timer-seconds');
+
+        function updateCountdown() {
+            if (totalSeconds <= 0) {
+                totalSeconds = 12 * 3600; // Reset lại 12h nếu hết giờ
+            } else {
+                totalSeconds--;
+            }
+
+            const hrs = Math.floor(totalSeconds / 3600);
+            const mins = Math.floor((totalSeconds % 3600) / 60);
+            const secs = totalSeconds % 60;
+
+            timerHours.textContent = hrs.toString().padStart(2, '0');
+            timerMinutes.textContent = mins.toString().padStart(2, '0');
+            timerSeconds.textContent = secs.toString().padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+
+        // 2. CHỌN GÓI QUÀ ĐỒNG BỘ VÀO FORM
+        function selectPackage(packageName) {
+            const selectEl = document.getElementById('selectedPackage');
+            selectEl.value = packageName;
+            
+            // Scroll mượt đến form đặt hàng
+            const orderFormSection = document.getElementById('orderForm');
+            orderFormSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Hiệu ứng nhấp nháy làm nổi bật
+            selectEl.classList.add('ring-4', 'ring-brand-deeppink');
+            setTimeout(() => {
+                selectEl.classList.remove('ring-4', 'ring-brand-deeppink');
+            }, 1200);
+        }
+
+        // 3. XỬ LÝ FORM SUBMISSION VÀ HIỂN THỊ MODAL
+        function handleOrderSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const pkg = document.getElementById('selectedPackage').value;
+            const note = document.getElementById('custNote').value.trim() || 'Viết lời chúc yêu thương ngẫu nhiên';
+
+            document.getElementById('modalCustName').textContent = name;
+            document.getElementById('modalCustPhone').textContent = phone;
+            document.getElementById('modalPackage').textContent = pkg;
+            document.getElementById('modalCustNote').textContent = note;
+
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            // Reset form
+            document.getElementById('orderForm').reset();
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // 4. BACK TO TOP BUTTON LOGIC
+        window.addEventListener('scroll', () => {
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 400) {
+                backToTop.classList.remove('hidden');
+                backToTop.classList.add('flex');
+            } else {
+                backToTop.classList.add('hidden');
+                backToTop.classList.remove('flex');
+            }
+        });
+    </script>
+</body>
+</html>
